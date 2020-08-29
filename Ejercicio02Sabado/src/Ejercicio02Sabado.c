@@ -20,7 +20,7 @@ int main(void)
 	int flagJovenCasado=0;
 	int edadJovenCasado;
 	int flagViejoSoltero=0;
-	int edadViejoCasado;
+	int edadViejoSoltero;
 	int contadorSolteros=0;
 	int contadorCasados=0;
 	int contadorDivorciados=0;
@@ -30,8 +30,11 @@ int main(void)
 	do
 	{
 		setbuf(stdout,NULL);
-		printf("Ingrese una edad: ");
-		scanf("%d",&edad);
+		do
+		{
+			printf("Ingrese una edad (1 a 120): ");
+			scanf("%d",&edad);
+		}while(edad<1 || edad>120);
 		printf("Ingrese el estado civil:\n(s para soltero - c para casado - d para divorciado): ");
 		fflush(stdin);
 		scanf("%c",&estadoCivil);
@@ -50,20 +53,38 @@ int main(void)
 				break;
 			case 's':
 				contadorSolteros++;
-				if(flagViejoSoltero == 0 || edad>edadViejoCasado)
+				if(flagViejoSoltero == 0 || edad>edadViejoSoltero)
 				{
-					edadViejoCasado = edad;
+					edadViejoSoltero = edad;
 					flagViejoSoltero = 1;
 				}
 				break;
 		}
-		printf("¿Desea ingresar otra edad? s/n: ");
-		fflush(stdin);
-		scanf("%c",&respuesta);
+
+		do
+		{
+			printf("¿Desea ingresar otra edad? s/n: ");
+			fflush(stdin);
+			scanf("%c",&respuesta);
+		}while(respuesta != 's' && respuesta != 'n');
 	}while(respuesta == 's');
 
-	printf("\nLa persona mas joven casada tiene %d años",edadJovenCasado);
-	printf("\nLa persona mas vieja soltera tiene %d años",edadViejoCasado);
+	if(contadorCasados > 0)
+	{
+		printf("\nLa persona mas joven casada tiene %d años",edadJovenCasado);
+	}
+	else
+	{
+		printf("\nNo se ingresaron personas casadas.");
+	}
+	if(contadorSolteros > 0)
+		{
+			printf("\nLa persona mas vieja soltera tiene %d años",edadViejoSoltero);
+		}
+		else
+		{
+			printf("\nNo se ingresaron personas solteras.");
+		}
 	if(contadorCasados>contadorSolteros && contadorCasados>contadorDivorciados)
 	{
 		printf("\nEl estado civil mas ingresado es: Casados");

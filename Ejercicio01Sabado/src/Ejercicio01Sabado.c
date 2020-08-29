@@ -47,4 +47,5 @@ int main(void)
 	printf("\nEl promedio de las edades ingresadas es: %.2f", promedio);
 	printf("\nLa edad maxima ingresada es: %d", edadMaxima);
 	printf("\nLa edad minima ingresada es: %d", edadMinima);
+	printf("\nLa cantidad de edades ingresadas fue %d",contadorEdades);
 }
