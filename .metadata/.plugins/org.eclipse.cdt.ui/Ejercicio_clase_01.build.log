@@ -1,0 +1,7 @@
+11:21:26 **** Rebuild of configuration Debug for project Ejercicio_clase_01 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicio_clase_01.o" "..\\src\\Ejercicio_clase_01.c" 
+gcc -o Ejercicio_clase_01.exe "src\\Ejercicio_clase_01.o" 
+
+11:21:26 Build Finished. 0 errors, 0 warnings. (took 283ms)
+
