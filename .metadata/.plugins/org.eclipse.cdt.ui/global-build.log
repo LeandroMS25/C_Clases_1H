@@ -1,4 +1,8 @@
-11:23:19 **** Rebuild of configuration Debug for project Ejercicio01Sabado ****
+12:16:10 **** Incremental Build of configuration Debug for project Ejercicio02Sabado ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicio01Sabado.o" "..\\src\\Ejercicio01Sabado.c" 
-gcc -o Ejercicio01Sabado.exe "src\\Ejercicio01Sabado.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicio02Sabado.o" "..\\src\\Ejercicio02Sabado.c" 
+gcc -o Ejercicio02Sabado.exe "src\\Ejercicio02Sabado.o" 
+12:16:20 **** Incremental Build of configuration Debug for project Ejercicio02Sabado ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicio02Sabado.o" "..\\src\\Ejercicio02Sabado.c" 
+gcc -o Ejercicio02Sabado.exe "src\\Ejercicio02Sabado.o" 
