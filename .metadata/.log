@@ -69,3 +69,6 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.cdt.core 1 0 2020-08-29 11:22:52.310
 !MESSAGE Indexed 'Ejercicio01Sabado' (1 sources, 14 headers) in 0,058 sec: 951 declarations; 1.930 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-08-29 11:30:53.194
+!MESSAGE Indexed 'Ejercicio02Sabado' (1 sources, 14 headers) in 0,049 sec: 951 declarations; 1.930 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)

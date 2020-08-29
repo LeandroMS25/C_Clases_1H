@@ -1,13 +1,14 @@
 /*
  ============================================================================
- Name        : Ejercicio01Sabado.c
+ Name        : Ejercicio02Sabado.c
  Author      : Leandro
- Description : Se pide una cantidad indeterminada de edades enteras,
-				informar:
-				el máximo ingresado
-				el mínimo ingresado
-				el promedio
-				la cantidad de edades ingresadas
+ Description : Ejercicio 02:
+Al ejercicio anterior :
+Ademas de la edad ingresar el estado civil de la persona ( 's' para soltera , 'c' para casada, 'd' divorciada)
+ademas de informar lo anterior ....informar:
+la persona mas joven de las casadas
+a persona mas Vieja de las solteras
+de los estados civiles , cual fue el mas ingresado
  ============================================================================
  */
 #include <stdio.h>
