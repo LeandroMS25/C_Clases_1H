@@ -1,6 +1,6 @@
-02:58:34 **** Incremental Build of configuration Debug for project funcion ****
+20:45:56 **** Incremental Build of configuration Debug for project prueba ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcion.o" "..\\src\\funcion.c" 
-gcc -o funcion.exe "src\\funcion.o" 
-Info: Nothing to build for funcion
-Info: Nothing to build for funcion
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\prueba.o" "..\\src\\prueba.c" 
+gcc -o prueba.exe "src\\prueba.o" 
+Info: Nothing to build for prueba
+Info: Nothing to build for prueba
