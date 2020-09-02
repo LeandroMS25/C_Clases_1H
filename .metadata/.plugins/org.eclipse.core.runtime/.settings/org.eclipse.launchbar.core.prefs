@@ -1,11 +1,14 @@
 LaunchTargetManager/configs/Clase_03.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/Ejercicio02Sabado.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Ejercicio_clase_03.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/funcion.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/prueba.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:Ejercicio02Sabado.exe,org.eclipse.launchbar.core.descriptorType.default\:funcion.exe,org.eclipse.launchbar.core.descriptorType.default\:Clase_03.exe,org.eclipse.launchbar.core.descriptorType.default\:prueba.exe
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Ejercicio02Sabado.exe,org.eclipse.launchbar.core.descriptorType.default\:funcion.exe,org.eclipse.launchbar.core.descriptorType.default\:Clase_03.exe,org.eclipse.launchbar.core.descriptorType.default\:prueba.exe,org.eclipse.launchbar.core.descriptorType.default\:Ejercicio_clase_03.exe
 eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:Clase_03.exe/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Clase_03.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:Ejercicio02Sabado.exe/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:Ejercicio02Sabado.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
