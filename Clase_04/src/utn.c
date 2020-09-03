@@ -7,26 +7,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int getInt(char *mensaje, char *mensajeError, char *mensajeReintentos,  int reintentos, int maximo, int minimo, int *pResultado)
+int getFloat(char *mensaje, char *mensajeError, char *mensajeReintentos,  int reintentos, float maximo, float minimo, float *pResultado)
 {
 	int retorno = -1;
-	int bufferInt;
+	float bufferFloat;
 	int respuestaScanF;
 	if(pResultado != NULL && mensaje != NULL && mensajeError != NULL && mensajeReintentos != NULL && minimo<=maximo && reintentos >= 0)
 	{
 		printf("%s",mensaje);
 		fflush(stdin);
-		respuestaScanF = scanf("%d",&bufferInt);
-		while(respuestaScanF != 1 && reintentos > 0 && (bufferInt<minimo || bufferInt>maximo))
+		respuestaScanF = scanf("%f",&bufferFloat);
+		while(respuestaScanF != 1 && reintentos > 0 && (bufferFloat<minimo || bufferFloat>maximo))
 		{
 			reintentos--;
 			printf("%s",mensajeError);
 			fflush(stdin);
-			respuestaScanF = scanf("%d",&bufferInt);
+			respuestaScanF = scanf("%f",&bufferFloat);
 		}
 		if(respuestaScanF != 0)
 		{
-			*pResultado = bufferInt;
+			*pResultado = bufferFloat;
 			retorno = 0;
 		}
 		else
@@ -57,6 +57,36 @@ int getInt(char *mensaje, char *mensajeError, char *mensajeReintentos,  int rein
 		if(respuestaScanF != 0)
 		{
 			*pResultado = bufferInt;
+			retorno = 0;
+		}
+		else
+		{
+			printf("%s",mensajeReintentos);
+		}
+	}
+	return retorno;
+}
+
+int getChar(char *mensaje, char *mensajeError, char *mensajeReintentos, int reintentos, char maximo, char minimo, char *pResultado)
+{
+	int retorno = -1;
+	char bufferChar;
+	int respuestaScanF;
+	if(pResultado != NULL && mensaje != NULL && mensajeError != NULL && mensajeReintentos != NULL && minimo<=maximo && reintentos >= 0)
+	{
+		printf("%s",mensaje);
+		fflush(stdin);
+		respuestaScanF = scanf("%c",&bufferChar);
+		while(respuestaScanF != 1 && reintentos > 0 && (bufferChar<minimo || bufferChar>maximo))
+		{
+			reintentos--;
+			printf("%s",mensajeError);
+			fflush(stdin);
+			respuestaScanF = scanf("%c",&bufferChar);
+		}
+		if(respuestaScanF != 0)
+		{
+			*pResultado = bufferChar;
 			retorno = 0;
 		}
 		else
