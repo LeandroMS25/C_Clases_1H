@@ -3,7 +3,7 @@
  Name        : Ejercicio_clase_03.c
  Author      : Leandro Sobrino
  Description :
- Pedir al usuario dos metros float.
+ Pedir al usuario dos numeros float.
  - Funcion sumar.
  - Funcion restar.
  - Funcion multiplicar.
@@ -14,12 +14,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
-int sumarFloat(float operadorA, float operadorB,float *resultado);
-int restarFloat(float operadorA, float operadorB,float *resultado);
-int multiplicarFloat(float operadorA, float operadorB,float *resultado);
-int dividirFloat(float operadorA, float operadorB,float *resultado);
-float getFloat(char *mensaje, char *mensajeError, char *mensajeReintentos,int reintentos,float *pResultado);
+#include "utn.h"
 
 int main(void)
 {
@@ -35,7 +30,7 @@ int main(void)
 	printf("Bienvenido a la calculadora de mierda.\n");
 	printf("\nIngrese la operación que desea realizar. Opciones: +|-|/|*. Respuesta: ");
 	scanf("%c",&operacion);
-	while(operacion != '+' && operacion != '-' &&operacion != '/' && operacion != '*')
+	while(operacion != '+' && operacion != '-' && operacion != '/' && operacion != '*')
 	{
 		printf("La operación ingresada no es válida. Ingrese otra: ");
 		fflush(stdin);
@@ -67,64 +62,4 @@ int main(void)
 			}
 		}
 	}
-}
-
-float getFloat(char *mensaje, char *mensajeError, char *mensajeReintentos,int reintentos,float *pResultado)
-{
-	int retorno = -1;
-	float bufferFloat;
-	int respuestaScanF;
-	printf("%s",mensaje);
-	fflush(stdin);
-	respuestaScanF = scanf("%f",&bufferFloat);
-	while(respuestaScanF != 1 && reintentos > 0)
-	{
-		reintentos--;
-		printf("%s",mensajeError);
-		fflush(stdin);
-		respuestaScanF = scanf("%f",&bufferFloat);
-	}
-	if(respuestaScanF != 0)
-	{
-		*pResultado = bufferFloat;
-		retorno = 0;
-	}
-	else
-	{
-		printf("%s",mensajeReintentos);
-	}
-	return retorno;
-}
-
-int sumarFloat(float operadorA, float operadorB,float *resultado)
-{
-	*resultado = operadorA + operadorB;
-	return 0;
-}
-
-int restarFloat(float operadorA, float operadorB,float *resultado)
-{
-	*resultado = operadorA - operadorB;
-	return 0;
-}
-
-int multiplicarFloat(float operadorA, float operadorB,float *resultado)
-{
-	*resultado = operadorA * operadorB;
-	return 0;
-}
-
-int dividirFloat(float operadorA, float operadorB,float *resultado)
-{
-	int retorno;
-		if(operadorB != 0)
-		{
-			*resultado = operadorA / operadorB; // Se declara en la funcion con asterisco.
-			retorno = 0;
-		}
-		else
-		{
-			retorno = -1;
-		}
-		return retorno;
 }

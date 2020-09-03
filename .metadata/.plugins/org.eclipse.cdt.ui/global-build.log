@@ -1,6 +1,4 @@
-00:27:50 **** Incremental Build of configuration Debug for project Ejercicio_clase_03 ****
+18:02:20 **** Rebuild of configuration Debug for project Clase_04 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicio_clase_03.o" "..\\src\\Ejercicio_clase_03.c" 
-gcc -o Ejercicio_clase_03.exe "src\\Ejercicio_clase_03.o" 
-Info: Nothing to build for Ejercicio_clase_03
-Info: Nothing to build for Ejercicio_clase_03
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_04.o" "..\\src\\Clase_04.c" 
+gcc -o Clase_04.exe "src\\Clase_04.o" 
