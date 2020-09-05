@@ -12,8 +12,8 @@ int sumarFloat(float operadorA, float operadorB,float *pResultado);
 int restarFloat(float operadorA, float operadorB,float *pResultado);
 int multiplicarFloat(float operadorA, float operadorB,float *pResultado);
 int dividirFloat(float operadorA, float operadorB,float *pResultado);
-int getFloat(char *mensaje, char *mensajeError, char *mensajeReintentos,  int reintentos, float maximo, float minimo, float *pResultado);
-int getInt(char *mensaje, char *mensajeError, char *mensajeReintentos,  int reintentos, int maximo, int minimo, int *pResultado);
-int getChar(char *mensaje, char *mensajeError, char *mensajeReintentos, int reintentos, char maximo, char minimo, char *pResultado);
+int getFloat(float *pResultado, char *mensaje, char *mensajeError, char *mensajeReintentos, float minimo, float maximo, int reintentos);
+int getInt(int *pResultado, char *mensaje, char *mensajeError, char *mensajeReintentos, int minimo, int maximo, int reintentos);
+int getChar(char *pResultado, char *mensaje, char *mensajeError, char *mensajeReintentos, char minimo, char maximo, int reintentos);
 
 #endif /* UTN_H_ */

@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int getFloat(char *mensaje, char *mensajeError, char *mensajeReintentos,  int reintentos, float maximo, float minimo, float *pResultado)
+int getFloat(float *pResultado, char *mensaje, char *mensajeError, char *mensajeReintentos, float minimo, float maximo, int reintentos)
 {
 	int retorno = -1;
 	float bufferFloat;
@@ -24,42 +24,44 @@ int getFloat(char *mensaje, char *mensajeError, char *mensajeReintentos,  int re
 			fflush(stdin);
 			respuestaScanF = scanf("%f",&bufferFloat);
 		}
-		if(respuestaScanF != 0)
+		if(reintentos == 0)
+		{
+			printf("%s",mensajeReintentos);
+		}
+		else
 		{
 			*pResultado = bufferFloat;
 			retorno = 0;
 		}
-		else
-		{
-			printf("%s",mensajeReintentos);
-		}
 	}
 	return retorno;
 }
 
-int getInt(char *mensaje, char *mensajeError, char *mensajeReintentos,  int reintentos, int maximo, int minimo, int *pResultado)
+int getInt(int *pResultado, char *mensaje, char *mensajeError, char *mensajeReintentos, int minimo, int maximo, int reintentos)
 {
 	int retorno = -1;
 	int bufferInt;
-	int respuestaScanF;
+	// int respuestaScanF;
 	if(pResultado != NULL && mensaje != NULL && mensajeError != NULL && mensajeReintentos != NULL && minimo<=maximo && reintentos >= 0)
 	{
-		printf("%s",mensaje);
-		fflush(stdin);
-		respuestaScanF = scanf("%d",&bufferInt);
-		while(respuestaScanF != 1 && reintentos > 0 && (bufferInt<minimo || bufferInt>maximo))
+		do
 		{
-			reintentos--;
-			printf("%s",mensajeError);
+			printf("%s",mensaje);
 			fflush(stdin);
-			respuestaScanF = scanf("%d",&bufferInt);
-		}
-		if(respuestaScanF != 0)
-		{
-			*pResultado = bufferInt;
-			retorno = 0;
-		}
-		else
+			scanf("%d",&bufferInt);
+			if(bufferInt>=minimo && bufferInt<maximo)
+			{
+				*pResultado = bufferInt;
+				retorno=0;
+				break;
+			}
+			else
+			{
+				printf("%s",mensajeError);
+				reintentos--;
+			}
+		}while(reintentos >= 0);
+		if(reintentos < 0)
 		{
 			printf("%s",mensajeReintentos);
 		}
@@ -67,7 +69,7 @@ int getInt(char *mensaje, char *mensajeError, char *mensajeReintentos,  int rein
 	return retorno;
 }
 
-int getChar(char *mensaje, char *mensajeError, char *mensajeReintentos, int reintentos, char maximo, char minimo, char *pResultado)
+int getChar(char *pResultado, char *mensaje, char *mensajeError, char *mensajeReintentos, char minimo, char maximo, int reintentos)
 {
 	int retorno = -1;
 	char bufferChar;
@@ -84,20 +86,20 @@ int getChar(char *mensaje, char *mensajeError, char *mensajeReintentos, int rein
 			fflush(stdin);
 			respuestaScanF = scanf("%c",&bufferChar);
 		}
-		if(respuestaScanF != 0)
+		if(reintentos == 0)
 		{
-			*pResultado = bufferChar;
-			retorno = 0;
+			printf("%s",mensajeReintentos);
 		}
 		else
 		{
-			printf("%s",mensajeReintentos);
+			*pResultado = bufferChar;
+			retorno = 0;
 		}
 	}
 	return retorno;
 }
 
-int sumarFloat(float operadorA, float operadorB,float *pResultado)
+int sumarFloat(float *pResultado, float operadorA, float operadorB)
 {
 	int retorno = -1;
 	if(pResultado != NULL)
@@ -108,7 +110,7 @@ int sumarFloat(float operadorA, float operadorB,float *pResultado)
 	return retorno;
 }
 
-int restarFloat(float operadorA, float operadorB,float *pResultado)
+int restarFloat(float *pResultado, float operadorA, float operadorB)
 {
 	int retorno = -1;
 		if(pResultado != NULL)
@@ -119,7 +121,7 @@ int restarFloat(float operadorA, float operadorB,float *pResultado)
 		return retorno;
 }
 
-int multiplicarFloat(float operadorA, float operadorB,float *pResultado)
+int multiplicarFloat(float *pResultado, float operadorA, float operadorB)
 {
 	int retorno = -1;
 		if(pResultado != NULL)
@@ -130,7 +132,7 @@ int multiplicarFloat(float operadorA, float operadorB,float *pResultado)
 		return retorno;
 }
 
-int dividirFloat(float operadorA, float operadorB,float *pResultado)
+int dividirFloat(float *pResultado, float operadorA, float operadorB)
 {
 	int retorno = -1;
 		if(pResultado != NULL && operadorB != 0)
