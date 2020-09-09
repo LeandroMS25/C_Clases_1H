@@ -1,10 +1,5 @@
-16:42:30 **** Incremental Build of configuration Debug for project Ejercicio02Sabado1 ****
+22:16:59 **** Incremental Build of configuration Debug for project Clase_05 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicio02Sabado1.o" "..\\src\\Ejercicio02Sabado1.c" 
-gcc -o Ejercicio02Sabado1.exe "src\\Ejercicio02Sabado1.o" "src\\funciones.o" 
-Info: Nothing to build for Ejercicio02Sabado1
-16:43:50 **** Incremental Build of configuration Debug for project Ejercicio02Sabado1 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicio02Sabado1.o" "..\\src\\Ejercicio02Sabado1.c" 
-gcc -o Ejercicio02Sabado1.exe "src\\Ejercicio02Sabado1.o" "src\\funciones.o" 
-Info: Nothing to build for Ejercicio02Sabado1
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_05.o" "..\\src\\Clase_05.c" 
+gcc -o Clase_05.exe "src\\Clase_05.o" "src\\calculosArray.o" "src\\utn.o" 
+Info: Nothing to build for Clase_05
