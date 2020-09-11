@@ -1,5 +1,44 @@
-22:16:59 **** Incremental Build of configuration Debug for project Clase_05 ****
+20:48:52 **** Incremental Build of configuration Debug for project Clase_06 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_05.o" "..\\src\\Clase_05.c" 
-gcc -o Clase_05.exe "src\\Clase_05.o" "src\\calculosArray.o" "src\\utn.o" 
-Info: Nothing to build for Clase_05
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesArray.o" "..\\src\\funcionesArray.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
+gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
+Info: Nothing to build for Clase_06
+21:17:22 **** Incremental Build of configuration Debug for project Clase_06 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesArray.o" "..\\src\\funcionesArray.c" 
+gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
+21:18:32 **** Incremental Build of configuration Debug for project Clase_06 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
+gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
+21:19:16 **** Incremental Build of configuration Debug for project Clase_06 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
+gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
+21:21:38 **** Incremental Build of configuration Debug for project Clase_06 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
+gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
+Info: Nothing to build for Clase_06
+Info: Nothing to build for Clase_06
+21:24:24 **** Incremental Build of configuration Debug for project Clase_06 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
+gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
+Info: Nothing to build for Clase_06
+21:24:40 **** Incremental Build of configuration Debug for project Clase_06 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
+gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_06.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:24:43 **** Incremental Build of configuration Debug for project Clase_06 ****
+Info: Internal Builder is used for build
+gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
+Info: Nothing to build for Clase_06
+21:32:42 **** Incremental Build of configuration Debug for project Clase_06 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
+gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
