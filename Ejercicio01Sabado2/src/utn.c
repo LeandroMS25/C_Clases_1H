@@ -44,6 +44,7 @@ int getInt(int *pResultado, char *mensaje, char *mensajeError, int reintentos, i
 	}
 	return retorno;
 }
+
 /*
  * \ brief - Solicita un float (número con decimal) al usuario.
  * \ param - char* mensaje, Mensaje a ser mostrado al usuario para solicitarle el dato.

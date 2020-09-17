@@ -1,44 +1,155 @@
-20:48:52 **** Incremental Build of configuration Debug for project Clase_06 ****
+17:31:59 **** Clean-only build of configuration Debug for project Test_Clase_07 ****
+rm -rf src/utn.d src/utn.o src/funcionesArray.d Test_Clase_07.exe src/Test_Clase_07.o src/Test_Clase_07.d src/funcionesArray.o 
+rm: cannot remove `Test_Clase_07.exe': Permission denied
+17:32:03 **** Rebuild of configuration Debug for project Test_Clase_07 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesArray.o" "..\\src\\funcionesArray.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
-gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
-Info: Nothing to build for Clase_06
-21:17:22 **** Incremental Build of configuration Debug for project Clase_06 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesArray.o" "..\\src\\funcionesArray.c" 
-gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
-21:18:32 **** Incremental Build of configuration Debug for project Clase_06 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
-gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
-21:19:16 **** Incremental Build of configuration Debug for project Clase_06 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
-gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
-21:21:38 **** Incremental Build of configuration Debug for project Clase_06 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
-gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
-Info: Nothing to build for Clase_06
-Info: Nothing to build for Clase_06
-21:24:24 **** Incremental Build of configuration Debug for project Clase_06 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
-gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
-Info: Nothing to build for Clase_06
-21:24:40 **** Incremental Build of configuration Debug for project Clase_06 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
-gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_06.exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Test_Clase_07.o" "..\\src\\Test_Clase_07.c" 
+gcc -o Test_Clase_07.exe "src\\Test_Clase_07.o" "src\\funcionesArray.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Test_Clase_07.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-21:24:43 **** Incremental Build of configuration Debug for project Clase_06 ****
+17:32:13 **** Incremental Build of configuration Debug for project Test_Clase_07 ****
 Info: Internal Builder is used for build
-gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
-Info: Nothing to build for Clase_06
-21:32:42 **** Incremental Build of configuration Debug for project Clase_06 ****
+gcc -o Test_Clase_07.exe "src\\Test_Clase_07.o" "src\\funcionesArray.o" "src\\utn.o" 
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+17:46:31 **** Incremental Build of configuration Debug for project Test_Clase_07 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_06.o" "..\\src\\Clase_06.c" 
-gcc -o Clase_06.exe "src\\Clase_06.o" "src\\funcionesArray.o" "src\\utn.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Test_Clase_07.o" "..\\src\\Test_Clase_07.c" 
+..\src\Test_Clase_07.c: In function 'main':
+..\src\Test_Clase_07.c:19:5: warning: implicit declaration of function 'myGets' [-Wimplicit-function-declaration]
+   19 |  if(myGets(numeros,sizeof(numeros)) == 0)
+      |     ^~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'getInt':
+..\src\utn.c:59:14: warning: passing argument 1 of 'myGets' from incompatible pointer type [-Wincompatible-pointer-types]
+   59 |   if( myGets(bufferString, sizeof(bufferString)) == 0 &&
+      |              ^~~~~~~~~~~~
+      |              |
+      |              int *
+..\src\utn.c:23:18: note: expected 'char *' but argument is of type 'int *'
+   23 | int myGets(char* cadena, int longitud)
+      |            ~~~~~~^~~~~~
+..\src\utn.c:60:15: warning: passing argument 1 of 'esNumerica' from incompatible pointer type [-Wincompatible-pointer-types]
+   60 |    esNumerica(bufferString, LEN_BUFFER_STRING)  == 1)
+      |               ^~~~~~~~~~~~
+      |               |
+      |               int *
+..\src\utn.c:14:29: note: expected 'char *' but argument is of type 'int *'
+   14 | static int esNumerica(char* cadena, int limite);
+      |                       ~~~~~~^~~~~~
+..\src\utn.c:63:23: warning: passing argument 1 of 'atoi' from incompatible pointer type [-Wincompatible-pointer-types]
+   63 |    *pResultado = atoi(bufferString);
+      |                       ^~~~~~~~~~~~
+      |                       |
+      |                       int *
+In file included from ..\src\utn.c:10:
+c:\mingw\include\stdlib.h:362:44: note: expected 'const char *' but argument is of type 'int *'
+  362 | _CRTIMP __cdecl __MINGW_NOTHROW  int atoi (const char *);
+      |                                            ^~~~~~~~~~~~
+At top level:
+..\src\utn.c:52:12: warning: 'getInt' defined but not used [-Wunused-function]
+   52 | static int getInt(int* pResultado)
+      |            ^~~~~~
+gcc -o Test_Clase_07.exe "src\\Test_Clase_07.o" "src\\funcionesArray.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Test_Clase_07.o: in function `main':
+C:\Users\leito\OneDrive\Escritorio\Clases y ejercicios ProLabo1\Test_Clase_07\Debug/../src/Test_Clase_07.c:19: undefined reference to `myGets'
+collect2.exe: error: ld returned 1 exit status
+17:47:00 **** Incremental Build of configuration Debug for project Test_Clase_07 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'getInt':
+..\src\utn.c:58:14: warning: passing argument 1 of 'myGets' from incompatible pointer type [-Wincompatible-pointer-types]
+   58 |   if( myGets(bufferString, sizeof(bufferString)) == 0 &&
+      |              ^~~~~~~~~~~~
+      |              |
+      |              int *
+..\src\utn.c:22:18: note: expected 'char *' but argument is of type 'int *'
+   22 | int myGets(char* cadena, int longitud)
+      |            ~~~~~~^~~~~~
+..\src\utn.c:59:15: warning: passing argument 1 of 'esNumerica' from incompatible pointer type [-Wincompatible-pointer-types]
+   59 |    esNumerica(bufferString, LEN_BUFFER_STRING)  == 1)
+      |               ^~~~~~~~~~~~
+      |               |
+      |               int *
+..\src\utn.c:13:29: note: expected 'char *' but argument is of type 'int *'
+   13 | static int esNumerica(char* cadena, int limite);
+      |                       ~~~~~~^~~~~~
+..\src\utn.c:62:23: warning: passing argument 1 of 'atoi' from incompatible pointer type [-Wincompatible-pointer-types]
+   62 |    *pResultado = atoi(bufferString);
+      |                       ^~~~~~~~~~~~
+      |                       |
+      |                       int *
+In file included from ..\src\utn.c:8:
+c:\mingw\include\stdlib.h:362:44: note: expected 'const char *' but argument is of type 'int *'
+  362 | _CRTIMP __cdecl __MINGW_NOTHROW  int atoi (const char *);
+      |                                            ^~~~~~~~~~~~
+At top level:
+..\src\utn.c:51:12: warning: 'getInt' defined but not used [-Wunused-function]
+   51 | static int getInt(int* pResultado)
+      |            ^~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Test_Clase_07.o" "..\\src\\Test_Clase_07.c" 
+..\src\Test_Clase_07.c: In function 'main':
+..\src\Test_Clase_07.c:17:7: warning: unused variable 'numeros' [-Wunused-variable]
+   17 |  char numeros[50];
+      |       ^~~~~~~
+gcc -o Test_Clase_07.exe "src\\Test_Clase_07.o" "src\\funcionesArray.o" "src\\utn.o" 
+17:47:49 **** Incremental Build of configuration Debug for project Test_Clase_07 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c:51:12: warning: 'getInt' defined but not used [-Wunused-function]
+   51 | static int getInt(int* pResultado)
+      |            ^~~~~~
+gcc -o Test_Clase_07.exe "src\\Test_Clase_07.o" "src\\funcionesArray.o" "src\\utn.o" 
+17:51:51 **** Incremental Build of configuration Debug for project Test_Clase_07 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Test_Clase_07.o" "..\\src\\Test_Clase_07.c" 
+..\src\Test_Clase_07.c: In function 'main':
+..\src\Test_Clase_07.c:17:7: warning: unused variable 'numeros' [-Wunused-variable]
+   17 |  char numeros[50];
+      |       ^~~~~~~
+gcc -o Test_Clase_07.exe "src\\Test_Clase_07.o" "src\\funcionesArray.o" "src\\utn.o" 
+17:57:05 **** Incremental Build of configuration Debug for project Test_Clase_07 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Test_Clase_07.o" "..\\src\\Test_Clase_07.c" 
+..\src\Test_Clase_07.c: In function 'main':
+..\src\Test_Clase_07.c:19:19: warning: passing argument 1 of 'utn_getNumero' makes pointer from integer without a cast [-Wint-conversion]
+   19 |  if(utn_getNumero(num1, "Ingrese el primero numero: ", "El numero ingresado no es valido.\n", -100, 100, 3) == 0)
+      |                   ^~~~
+      |                   |
+      |                   int
+In file included from ..\src\Test_Clase_07.c:12:
+..\src\utn.h:14:24: note: expected 'int *' but argument is of type 'int'
+   14 | int utn_getNumero(int *pResultado, char *mensaje, char *mensajeError, int minimo, int maximo, int reintentos);
+      |                   ~~~~~^~~~~~~~~~
+..\src\Test_Clase_07.c:19:5: warning: 'num1' is used uninitialized in this function [-Wuninitialized]
+   19 |  if(utn_getNumero(num1, "Ingrese el primero numero: ", "El numero ingresado no es valido.\n", -100, 100, 3) == 0)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o Test_Clase_07.exe "src\\Test_Clase_07.o" "src\\funcionesArray.o" "src\\utn.o" 
+17:57:14 **** Incremental Build of configuration Debug for project Test_Clase_07 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Test_Clase_07.o" "..\\src\\Test_Clase_07.c" 
+gcc -o Test_Clase_07.exe "src\\Test_Clase_07.o" "src\\funcionesArray.o" "src\\utn.o" 
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
+Info: Nothing to build for Test_Clase_07
