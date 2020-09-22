@@ -123,17 +123,19 @@ int ordenarArray(int pArray[], int arrayLength)
  * \ param - int lenghtArray, indica la longitud del array.
  * \ return - (-1) en caso de error / (0) en caso de funcionar.
  */
-int imprimirArray(int pArray[], int arrayLength)
+int imprimirArray(float* pArray, int limite)
 {
 	int retorno = -1;
 	int i;
 
-	if(pArray != NULL && arrayLength > 0)
+	if(pArray != NULL && limite > 0)
 	{
-		for (i = 0; i < arrayLength; i++)
+		for (i = 0; i < limite; i++)
 		{
-			printf("%d ",pArray[i]);
+			printf("%f ",pArray[i]);
 		}
+		printf("\n");
+		retorno = 0;
 	}
 	return retorno;
 }
@@ -142,23 +144,52 @@ int imprimirArray(int pArray[], int arrayLength)
  * \ param - int* pContador, puntero al espacio de memoria donde se dejara el valor obtenido.
  * \ param - int array[], recibe el array a utilizar.
  * \ param - int numero, numero que se contara.
- * \ param - int lenghtArray, indica la longitud del array.
+ * \ param - int limite, indica la longitud del array.
  * \ return - (-1) en caso de error / (0) en caso de funcionar.
  */
-int contadorNumArray(int* pContador,int pArray[],int numero, int arrayLength)
+int contarNumArray(int* pContador,int pArray[],int numero, int limite)
 {
 	int retorno = -1;
 	int i;
 	int contador=0;
 
-	if(pArray != NULL && pContador != NULL && arrayLength > 0)
+	if(pArray != NULL && pContador != NULL && limite > 0)
 	{
-		for (i = 0; i < arrayLength; i++)
+		for (i = 0; i < limite; i++)
 		{
 			if(pArray[i] == numero)
 			{
 				contador++;
 			}
+		}
+		*pContador = contador;
+		retorno = 0;
+	}
+	return retorno;
+}
+/*
+ * \ brief - Cuenta la cantidad de un determinado caracter.
+ * \ param - int* pContador, puntero al espacio de memoria donde se dejara el valor obtenido.
+ * \ param - int array[], recibe el array a utilizar.
+ * \ param - int caracter, caracter que se contara.
+ * \ param - int limite, indica la longitud del array.
+ * \ return - (-1) en caso de error / (0) en caso de funcionar.
+ */
+int contarCharArray(int* pContador,char pArray[],char caracter)
+{
+	int retorno = -1;
+	int i=0;
+	int contador=0;
+
+	if(pArray != NULL && pContador != NULL)
+	{
+		while(pArray[i] != '\0')
+		{
+			if(pArray[i] == caracter)
+			{
+				contador++;
+			}
+			i++;
 		}
 		*pContador = contador;
 		retorno = 0;

@@ -1,76 +1,191 @@
-22:09:41 **** Rebuild of configuration Debug for project Clase_08_Ejercicio06 ****
+14:16:11 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_08_Ejercicio06.o" "..\\src\\Clase_08_Ejercicio06.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sabado04Ejercicio01.o" "..\\src\\Sabado04Ejercicio01.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funcionesArray.o" "..\\src\\funcionesArray.c" 
-gcc -o Clase_08_Ejercicio06.exe "src\\Clase_08_Ejercicio06.o" "src\\funcionesArray.o" "src\\utn.o" 
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-22:11:36 **** Incremental Build of configuration Debug for project Clase_08_Ejercicio06 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+14:24:18 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_08_Ejercicio06.o" "..\\src\\Clase_08_Ejercicio06.c" 
-gcc -o Clase_08_Ejercicio06.exe "src\\Clase_08_Ejercicio06.o" "src\\funcionesArray.o" "src\\utn.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_08_Ejercicio06.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-22:11:56 **** Incremental Build of configuration Debug for project Clase_08_Ejercicio06 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'initCadena':
+..\src\utn.c:337:18: warning: passing argument 1 of 'strncpy' makes pointer from integer without a cast [-Wint-conversion]
+  337 |    strncpy(pArray[i],longitud,"Espacio vacío.") ;
+      |            ~~~~~~^~~
+      |                  |
+      |                  char
+In file included from ..\src\utn.c:9:
+c:\mingw\include\string.h:86:40: note: expected 'char *' but argument is of type 'char'
+   86 | _CRTIMP __cdecl __MINGW_NOTHROW  char *strncpy (char *, const char *, size_t);
+      |                                        ^~~~~~~
+..\src\utn.c:337:22: warning: passing argument 2 of 'strncpy' makes pointer from integer without a cast [-Wint-conversion]
+  337 |    strncpy(pArray[i],longitud,"Espacio vacío.") ;
+      |                      ^~~~~~~~
+      |                      |
+      |                      int
+In file included from ..\src\utn.c:9:
+c:\mingw\include\string.h:86:40: note: expected 'const char *' but argument is of type 'int'
+   86 | _CRTIMP __cdecl __MINGW_NOTHROW  char *strncpy (char *, const char *, size_t);
+      |                                        ^~~~~~~
+..\src\utn.c:337:31: warning: passing argument 3 of 'strncpy' makes integer from pointer without a cast [-Wint-conversion]
+  337 |    strncpy(pArray[i],longitud,"Espacio vacío.") ;
+      |                               ^~~~~~~~~~~~~~~~
+      |                               |
+      |                               char *
+In file included from ..\src\utn.c:9:
+c:\mingw\include\string.h:86:40: note: expected 'size_t' {aka 'unsigned int'} but argument is of type 'char *'
+   86 | _CRTIMP __cdecl __MINGW_NOTHROW  char *strncpy (char *, const char *, size_t);
+      |                                        ^~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sabado04Ejercicio01.o" "..\\src\\Sabado04Ejercicio01.c" 
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+14:25:10 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_08_Ejercicio06.o" "..\\src\\Clase_08_Ejercicio06.c" 
-gcc -o Clase_08_Ejercicio06.exe "src\\Clase_08_Ejercicio06.o" "src\\funcionesArray.o" "src\\utn.o" 
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-22:13:30 **** Incremental Build of configuration Debug for project Clase_08_Ejercicio06 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'initCadena':
+..\src\utn.c:337:18: warning: passing argument 1 of 'strncpy' makes pointer from integer without a cast [-Wint-conversion]
+  337 |    strncpy(pArray[i],sizeof(pArray),"Espacio vacío.") ;
+      |            ~~~~~~^~~
+      |                  |
+      |                  char
+In file included from ..\src\utn.c:9:
+c:\mingw\include\string.h:86:40: note: expected 'char *' but argument is of type 'char'
+   86 | _CRTIMP __cdecl __MINGW_NOTHROW  char *strncpy (char *, const char *, size_t);
+      |                                        ^~~~~~~
+..\src\utn.c:337:22: warning: passing argument 2 of 'strncpy' makes pointer from integer without a cast [-Wint-conversion]
+  337 |    strncpy(pArray[i],sizeof(pArray),"Espacio vacío.") ;
+      |                      ^~~~~~~~~~~~~~
+      |                      |
+      |                      unsigned int
+In file included from ..\src\utn.c:9:
+c:\mingw\include\string.h:86:40: note: expected 'const char *' but argument is of type 'unsigned int'
+   86 | _CRTIMP __cdecl __MINGW_NOTHROW  char *strncpy (char *, const char *, size_t);
+      |                                        ^~~~~~~
+..\src\utn.c:337:37: warning: passing argument 3 of 'strncpy' makes integer from pointer without a cast [-Wint-conversion]
+  337 |    strncpy(pArray[i],sizeof(pArray),"Espacio vacío.") ;
+      |                                     ^~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     char *
+In file included from ..\src\utn.c:9:
+c:\mingw\include\string.h:86:40: note: expected 'size_t' {aka 'unsigned int'} but argument is of type 'char *'
+   86 | _CRTIMP __cdecl __MINGW_NOTHROW  char *strncpy (char *, const char *, size_t);
+      |                                        ^~~~~~~
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+14:25:35 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_08_Ejercicio06.o" "..\\src\\Clase_08_Ejercicio06.c" 
-gcc -o Clase_08_Ejercicio06.exe "src\\Clase_08_Ejercicio06.o" "src\\funcionesArray.o" "src\\utn.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_08_Ejercicio06.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-22:13:34 **** Incremental Build of configuration Debug for project Clase_08_Ejercicio06 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'initCadena':
+..\src\utn.c:337:19: warning: passing argument 2 of 'strncpy' makes pointer from integer without a cast [-Wint-conversion]
+  337 |    strncpy(pArray,sizeof(pArray),"Espacio vacío.") ;
+      |                   ^~~~~~~~~~~~~~
+      |                   |
+      |                   unsigned int
+In file included from ..\src\utn.c:9:
+c:\mingw\include\string.h:86:40: note: expected 'const char *' but argument is of type 'unsigned int'
+   86 | _CRTIMP __cdecl __MINGW_NOTHROW  char *strncpy (char *, const char *, size_t);
+      |                                        ^~~~~~~
+..\src\utn.c:337:34: warning: passing argument 3 of 'strncpy' makes integer from pointer without a cast [-Wint-conversion]
+  337 |    strncpy(pArray,sizeof(pArray),"Espacio vacío.") ;
+      |                                  ^~~~~~~~~~~~~~~~
+      |                                  |
+      |                                  char *
+In file included from ..\src\utn.c:9:
+c:\mingw\include\string.h:86:40: note: expected 'size_t' {aka 'unsigned int'} but argument is of type 'char *'
+   86 | _CRTIMP __cdecl __MINGW_NOTHROW  char *strncpy (char *, const char *, size_t);
+      |                                        ^~~~~~~
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+14:26:44 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
 Info: Internal Builder is used for build
-gcc -o Clase_08_Ejercicio06.exe "src\\Clase_08_Ejercicio06.o" "src\\funcionesArray.o" "src\\utn.o" 
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-22:13:58 **** Incremental Build of configuration Debug for project Clase_08_Ejercicio06 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+14:38:32 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_08_Ejercicio06.o" "..\\src\\Clase_08_Ejercicio06.c" 
-gcc -o Clase_08_Ejercicio06.exe "src\\Clase_08_Ejercicio06.o" "src\\funcionesArray.o" "src\\utn.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_08_Ejercicio06.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-22:14:01 **** Incremental Build of configuration Debug for project Clase_08_Ejercicio06 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sabado04Ejercicio01.o" "..\\src\\Sabado04Ejercicio01.c" 
+..\src\Sabado04Ejercicio01.c: In function 'main':
+..\src\Sabado04Ejercicio01.c:33:34: error: incompatible type for argument 1 of 'utn_getNombre'
+   33 |       utn_getNombre(ArrayMascotas[i], "Ingrese el nombre de la mascota: ", "Nombre invalido.\n", 2, LEN);
+      |                     ~~~~~~~~~~~~~^~~
+      |                                  |
+      |                                  Mascota {aka struct Mascota}
+In file included from ..\src\Sabado04Ejercicio01.c:12:
+..\src\utn.h:12:25: note: expected 'char *' but argument is of type 'Mascota' {aka 'struct Mascota'}
+   12 | int utn_getNombre(char *pResultado, char *mensaje, char *mensajeError, int reintentos, int limite);
+      |                   ~~~~~~^~~~~~~~~~
+14:42:27 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
 Info: Internal Builder is used for build
-gcc -o Clase_08_Ejercicio06.exe "src\\Clase_08_Ejercicio06.o" "src\\funcionesArray.o" "src\\utn.o" 
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-22:21:17 **** Incremental Build of configuration Debug for project Clase_08_Ejercicio06 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sabado04Ejercicio01.o" "..\\src\\Sabado04Ejercicio01.c" 
+..\src\Sabado04Ejercicio01.c: In function 'main':
+..\src\Sabado04Ejercicio01.c:24:7: warning: unused variable 'nombreMascota' [-Wunused-variable]
+   24 |  char nombreMascota[NOMBRE];
+      |       ^~~~~~~~~~~~~
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+14:44:51 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_08_Ejercicio06.o" "..\\src\\Clase_08_Ejercicio06.c" 
-gcc -o Clase_08_Ejercicio06.exe "src\\Clase_08_Ejercicio06.o" "src\\funcionesArray.o" "src\\utn.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_08_Ejercicio06.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-22:21:21 **** Incremental Build of configuration Debug for project Clase_08_Ejercicio06 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sabado04Ejercicio01.o" "..\\src\\Sabado04Ejercicio01.c" 
+..\src\Sabado04Ejercicio01.c: In function 'main':
+..\src\Sabado04Ejercicio01.c:34:40: warning: passing argument 1 of 'utn_getNumeroInt' makes pointer from integer without a cast [-Wint-conversion]
+   34 |       utn_getNumeroInt(ArrayMascotas[i].edad, "Ingrese la edad de la mascota: ", "Edad invalida.\n", 1, 20, 2);
+      |                        ~~~~~~~~~~~~~~~~^~~~~
+      |                                        |
+      |                                        int
+In file included from ..\src\Sabado04Ejercicio01.c:12:
+..\src\utn.h:13:27: note: expected 'int *' but argument is of type 'int'
+   13 | int utn_getNumeroInt(int *pResultado, char *mensaje, char *mensajeError, int minimo, int maximo, int reintentos);
+      |                      ~~~~~^~~~~~~~~~
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+14:46:31 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
 Info: Internal Builder is used for build
-gcc -o Clase_08_Ejercicio06.exe "src\\Clase_08_Ejercicio06.o" "src\\funcionesArray.o" "src\\utn.o" 
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
-Info: Nothing to build for Clase_08_Ejercicio06
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sabado04Ejercicio01.o" "..\\src\\Sabado04Ejercicio01.c" 
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+14:48:34 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sabado04Ejercicio01.o" "..\\src\\Sabado04Ejercicio01.c" 
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+14:48:49 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sabado04Ejercicio01.o" "..\\src\\Sabado04Ejercicio01.c" 
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+14:50:08 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sabado04Ejercicio01.o" "..\\src\\Sabado04Ejercicio01.c" 
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+14:51:58 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sabado04Ejercicio01.o" "..\\src\\Sabado04Ejercicio01.c" 
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+14:53:24 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Mascotas.o" "..\\src\\Mascotas.c" 
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+14:56:03 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sabado04Ejercicio01.o" "..\\src\\Sabado04Ejercicio01.c" 
+..\src\Sabado04Ejercicio01.c: In function 'main':
+..\src\Sabado04Ejercicio01.c:43:34: warning: passing argument 1 of 'ordenarArray' makes pointer from integer without a cast [-Wint-conversion]
+   43 |     ordenarArray(ArrayMascotas[i].edad, LEN);
+      |                  ~~~~~~~~~~~~~~~~^~~~~
+      |                                  |
+      |                                  int
+In file included from ..\src\Sabado04Ejercicio01.c:14:
+..\src\funcionesArray.h:14:23: note: expected 'int *' but argument is of type 'int'
+   14 | void ordenarArray(int array[], int arrayLength);
+      |                   ~~~~^~~~~~~
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+Info: Nothing to build for Sabado04Ejercicio01
+Info: Nothing to build for Sabado04Ejercicio01
+14:56:19 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sabado04Ejercicio01.o" "..\\src\\Sabado04Ejercicio01.c" 
+..\src\Sabado04Ejercicio01.c: In function 'main':
+..\src\Sabado04Ejercicio01.c:43:18: warning: passing argument 1 of 'ordenarArray' from incompatible pointer type [-Wincompatible-pointer-types]
+   43 |     ordenarArray(ArrayMascotas, LEN);
+      |                  ^~~~~~~~~~~~~
+      |                  |
+      |                  Mascota * {aka struct Mascota *}
+In file included from ..\src\Sabado04Ejercicio01.c:14:
+..\src\funcionesArray.h:14:23: note: expected 'int *' but argument is of type 'Mascota *' {aka 'struct Mascota *'}
+   14 | void ordenarArray(int array[], int arrayLength);
+      |                   ~~~~^~~~~~~
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
+14:57:31 **** Incremental Build of configuration Debug for project Sabado04Ejercicio01 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sabado04Ejercicio01.o" "..\\src\\Sabado04Ejercicio01.c" 
+gcc -o Sabado04Ejercicio01.exe "src\\Mascotas.o" "src\\Sabado04Ejercicio01.o" "src\\funcionesArray.o" "src\\utn.o" 
