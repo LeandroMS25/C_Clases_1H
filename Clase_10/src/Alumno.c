@@ -140,6 +140,7 @@ int alumno_init(Alumno* pArray, int limite)
  * \brief Busca un espacio libre en el array de alumnos.
  * \param Alumno pArrayAlumno, Es el puntero al array de alumnos
  * \param int limite, es el limite de array
+ * \param int* pIndex, puntero al espacio de memoria.
  * \return (-1) Error / (0) Ok
  */
 int alumno_buscarLibre(Alumno* pArray, int limite, int* pIndice)
@@ -147,7 +148,7 @@ int alumno_buscarLibre(Alumno* pArray, int limite, int* pIndice)
 	int retorno = -1;
 	int i;
 
-	if (pArray != NULL && limite > 0)
+	if (pArray != NULL && limite > 0 && pIndice != NULL)
 	{
 		for (i = 0; i < limite; i++)
 		{
