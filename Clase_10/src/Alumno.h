@@ -23,7 +23,7 @@ int alumno_modificar(Alumno* pArray,int limite, int indice);
 int alumno_baja(Alumno* pArray,int limite, int indice);
 int alumno_init(Alumno* pArray, int limite);
 int alumno_buscarLibre(Alumno* pArray, int limite, int* pIndice);
-int alumno_ordenarPorNombre(Alumno* pArray, int limite);
+int alumno_ordenarPorNombre(Alumno* pArray, int limite, int orden);
 int alumno_imprimirIndiceArray(Alumno* pArray, int limite, int indice);
 int alumno_buscarPorId(Alumno* pArray, int limite, int* pIndice, int id);
 

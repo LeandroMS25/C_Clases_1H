@@ -168,30 +168,35 @@ int alumno_buscarLibre(Alumno* pArray, int limite, int* pIndice)
  * \ param - int lenghtArray, indica la longitud del array.
  * \ return - (-1) en caso de error / (0) en caso de funcionar.
  */
-int alumno_ordenarPorNombre(Alumno* pArray, int limite)
+int alumno_ordenarPorNombre(Alumno* pArray, int limite, int orden)
 {
 	int retorno = -1;
 	int i;
-	Alumno aux;
-	int flagArrayDesordenado = 1; // El array inicia desordenado.
+	Alumno bufferAlumno;
+	int flagSwap; // El array inicia desordenado.
 	// 8 2 3 1 9 5 8 7 - Valores a utilizar
-	if(pArray != NULL && limite > 0)
+	if(pArray != NULL && limite > 0 && (orden == 0 || orden == 1))
 	{
-		while(flagArrayDesordenado == 1) // Se itera hasta que se confirme que está ordenado.
+		do // Se itera hasta que se confirme que está ordenado.
 		{
-			flagArrayDesordenado = 0; // Se asume que ya está ordenado, pero si vuelve a entrar al for quiere decir que no lo está.
+			flagSwap = 0; // Se asume que ya está ordenado, pero si vuelve a entrar al for quiere decir que no lo está.
 			for (i = 0; i < (limite - 1); i++)
 			{
-				if(strncmp(pArray[i].nombre, pArray[i+1].nombre,LONG_NOMBRE) > 0)
+				if(pArray[i].isEmpty == 0 && pArray[i+1].isEmpty == 0)
 				{
-					// Intercambiar (Swap)
-					aux = pArray[i]; // 8 - Se guarda en el auxiliar para no perderlo.
-					pArray[i] = pArray[i+1]; // 2 - Se guarda en el primer indice.
-					pArray[i+1] = aux; // 8 - Se guarda el valor que se habia almacenado en el aux, en el segundo indice.
-					flagArrayDesordenado = 1; // Se confirmo que estaba desordenado.
+					if( strncmp(pArray[i].nombre, pArray[i+1].nombre,LONG_NOMBRE) > 0 ||
+						(strncmp(pArray[i].nombre, pArray[i+1].nombre,LONG_NOMBRE) > 0 &&
+						pArray[i].legajo > pArray[i+1].legajo))
+					{
+						// Intercambiar (Swap)
+						bufferAlumno = pArray[i]; // 8 - Se guarda en el auxiliar para no perderlo.
+						pArray[i] = pArray[i+1]; // 2 - Se guarda en el primer indice.
+						pArray[i+1] = bufferAlumno; // 8 - Se guarda el valor que se habia almacenado en el aux, en el segundo indice.
+						flagSwap = 1; // Se confirmo que estaba desordenado.
+					}
 				}
 			}
-		}
+		}while(flagSwap == 1);
 		retorno = 0;
 	}
 	return retorno;
