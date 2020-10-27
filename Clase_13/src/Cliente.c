@@ -11,6 +11,8 @@
 #include "validaciones.h"
 
 static int generateNewId(void);
+static Cliente* cli_newConParametros(int id, char* name, char* lastName, char* cuit);
+static void cli_delete(Cliente* pCliente);
 /**
  * \brief Crea un nuevo cliente.
  * \param int id, id del cliente.
@@ -19,7 +21,7 @@ static int generateNewId(void);
  * \param char* cuit, Puntero al espacio de memoria.
  * \return devuelve un puntero al espacio de memoria del cliente.
  */
-Cliente* cli_newConParametros(int id, char* name, char* lastName, char* cuit)
+static Cliente* cli_newConParametros(int id, char* name, char* lastName, char* cuit)
 {
 	Cliente* pNewClient = NULL;
 	if(id > 0 && name != NULL && lastName != NULL && cuit != NULL)
@@ -39,7 +41,7 @@ Cliente* cli_newConParametros(int id, char* name, char* lastName, char* cuit)
  * \brief Borra un cliente (libera el espacio de memoria).
  * \param Cliente* pCliente, Es el puntero al espacio de memoria del cliente.
  */
-void cli_delete(Cliente* pCliente)
+static void cli_delete(Cliente* pCliente)
 {
 	if(pCliente!=NULL)
 	{
@@ -48,7 +50,7 @@ void cli_delete(Cliente* pCliente)
 }
 /**
  * \brief Inicializa el array.
- * \param Cliente* lisT[], Es el puntero al array.
+ * \param Cliente* list[], Es el puntero al array.
  * \param int len, es el limite de array.
  * \return (-1) Error / (0) Ok
  */
@@ -201,10 +203,8 @@ int cli_sortByName(Cliente* list[], int len, int order)
 	int i;
 	Cliente* aux;
 	int flagSwap = 1;
-	printf("asd");
 	if(list != NULL && len > 0 && order >= 0 && order <= 1)
 	{
-		printf("asd 1");
 		while(flagSwap)
 		{
 			flagSwap = 0;
@@ -283,30 +283,6 @@ int cli_findFree(Cliente* list[], int len, int* pIndex)
 int cli_findBusy(Cliente* list[], int len)
 {
 	int retorno = -1;
-	int i;
-
-	if (list != NULL && len > 0)
-	{
-		for (i = 0; i < len; i++)
-		{
-			if(list[i] == NULL)
-			{
-				retorno = 0;
-				break;
-			}
-		}
-	}
-	return retorno;
-}
-/**
- * \brief Chequea que el array este lleno.
- * \param Cliente* list, Es el puntero al array.
- * \param int len, es el limite de array.
- * \return 1 si esta lleno/ 0 si no esta lleno.
- */
-int cli_checkFullArray(Cliente* list[], int len)
-{
-	int retorno = 1;
 	int i;
 
 	if (list != NULL && len > 0)

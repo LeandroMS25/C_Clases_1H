@@ -1,9 +1,5 @@
-20:52:32 **** Incremental Build of configuration Debug for project Clase_13 ****
+07:27:01 **** Incremental Build of configuration Debug for project Clase_13 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cliente.o" "..\\src\\Cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informe.o" "..\\src\\Informe.c" 
 gcc -o Clase_13.exe "src\\Aviso.o" "src\\Clase_13.o" "src\\Cliente.o" "src\\Informe.o" "src\\validaciones.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_13.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-20:52:34 **** Incremental Build of configuration Debug for project Clase_13 ****
-Info: Internal Builder is used for build
-gcc -o Clase_13.exe "src\\Aviso.o" "src\\Clase_13.o" "src\\Cliente.o" "src\\Informe.o" "src\\validaciones.o" 
+Info: Nothing to build for Clase_13

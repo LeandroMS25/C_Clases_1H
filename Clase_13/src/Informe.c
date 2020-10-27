@@ -16,15 +16,15 @@ typedef struct
 }Rubro;
 
 static void info_init(Rubro* listRubro, int lenRubro);
-static void info_generarListaDeRubro(Rubro* listRubro, int lenRubro, Aviso* list, int len);
+static void info_generarListaDeRubro(Rubro* listRubro, int lenRubro, Aviso* list[], int len);
 static int info_estaEnMiListaDeRubro(Rubro* listRubro, int lenRubro, int rubro);
-static int info_printRubroConMasAvisos(Aviso* list, int len, Rubro* listRubro, int lenRubro);
+static int info_printRubroConMasAvisos(Aviso* list[], int len, Rubro* listRubro, int lenRubro);
 /**
  * \brief	Muestra el menu principal.
  * \param	int* pOption, puntero a un espacio de memoria.
  * \return	Retorna 0 (exito)y -1 (error).
  */
-int utn_showMainMenu(int* pOption, Aviso* listAviso, int lenAviso, Cliente* listCliente[], int lenCliente)
+int utn_showMainMenu(int* pOption, Aviso* listAviso[], int lenAviso, Cliente* listCliente[], int lenCliente)
 {
 	int retorno = -1;
 	int option;
@@ -90,13 +90,13 @@ int utn_showReportMenu(int* pOption)
 }
 /**
  * \brief Imprime la lista de clientes.
- * \param Aviso* list, Es el puntero al array
+ * \param Aviso* list[], Es el puntero al array
  * \param int len, es el limite de array
- * \param Cliente* listCliente, Es el puntero al array.
+ * \param Cliente* listCliente[], Es el puntero al array.
  * \param int lenCliente, es el limite de array.
  * \return (-1) Error / (0) Ok
  */
-int info_printClientes(Aviso* list, int len, Cliente* listCliente[], int lenCliente)
+int info_printClientes(Aviso* list[], int len, Cliente* listCliente[], int lenCliente)
 {
     int retorno = -1;
     int contador;
@@ -118,21 +118,20 @@ int info_printClientes(Aviso* list, int len, Cliente* listCliente[], int lenClie
 }
 /**
  * \brief Cuenta la cantidad de avisos activos segun id.
- * \param Aviso* list, Es el puntero al array
+ * \param Aviso* list[], Es el puntero al array
  * \param int len, es el limite de array
  * \param int id, recibira el id del cliente.
  * \return (-1) Error / (0) Ok
  */
-int info_contarAvisosActivosPorId(Aviso* list, int len, int id, int* pContador)
+int info_contarAvisosActivosPorId(Aviso* list[], int len, int id, int* pContador)
 {
     int retorno = -1;
     int contadorActivos = 0;
-
     if(list != NULL && len > 0 && id > 0 && pContador != NULL)
     {
         for(int i=0;i<len;i++)
         {
-            if(list[i].estado == 1 && list[i].isEmpty == 0 && list[i].idCliente == id)
+            if(list[i] != NULL && list[i]->estado == ACTIVO && list[i]->idCliente == id)
             {
             	contadorActivos++;
             }
@@ -144,12 +143,12 @@ int info_contarAvisosActivosPorId(Aviso* list, int len, int id, int* pContador)
 }
 /**
  * \brief Cuenta la cantidad de avisos pausados segun id.
- * \param Aviso* list, Es el puntero al array
+ * \param Aviso* list[], Es el puntero al array
  * \param int len, es el limite de array
  * \param int id, recibira el id del cliente.
  * \return (-1) Error / (0) Ok
  */
-int info_contarAvisosPausadosPorId(Aviso* list, int len, int id, int* pContador)
+int info_contarAvisosPausadosPorId(Aviso* list[], int len, int id, int* pContador)
 {
     int retorno = -1;
     int contadorPausados = 0;
@@ -158,7 +157,7 @@ int info_contarAvisosPausadosPorId(Aviso* list, int len, int id, int* pContador)
     {
         for(int i=0;i<len;i++)
         {
-            if(list[i].estado == 0 && list[i].isEmpty == 0 && list[i].idCliente == id)
+            if(list[i] != NULL && list[i]->estado == 0 && list[i]->idCliente == id)
             {
             	contadorPausados++;
             }
@@ -170,12 +169,12 @@ int info_contarAvisosPausadosPorId(Aviso* list, int len, int id, int* pContador)
 }
 /**
  * \brief Cuenta la cantidad de avisos segun id.
- * \param Aviso* list, Es el puntero al array
+ * \param Aviso* list[], Es el puntero al array
  * \param int len, es el limite de array
  * \param int id, recibira el id del cliente.
  * \return (-1) Error / (0) Ok
  */
-int info_contarAvisosPorId(Aviso* list, int len, int id,int* pContador)
+int info_contarAvisosPorId(Aviso* list[], int len, int id,int* pContador)
 {
     int retorno = -1;
     int contador = 0;
@@ -184,7 +183,7 @@ int info_contarAvisosPorId(Aviso* list, int len, int id,int* pContador)
     {
         for(int i=0;i<len;i++)
         {
-            if(list[i].isEmpty == 0 && list[i].idCliente == id)
+            if(list[i] != NULL && list[i]->idCliente == id)
             {
             	contador++;
             }
@@ -196,13 +195,13 @@ int info_contarAvisosPorId(Aviso* list, int len, int id,int* pContador)
 }
 /**
  * \brief Imprime el cliente que tenga mas avisos.
- * \param Aviso* list, Es el puntero al array
+ * \param Aviso* list[], Es el puntero al array
  * \param int len, es el limite de array
- * \param Cliente* listCliente, Es el puntero al array.
+ * \param Cliente* listCliente[], Es el puntero al array.
  * \param int lenCliente, es el limite de array.
  * \return (-1) Error / (0) Ok
  */
-int info_printClientWithMoreAds(Aviso* list, int len, Cliente* listCliente[], int lenCliente)
+int info_printClientWithMoreAds(Aviso* list[], int len, Cliente* listCliente[], int lenCliente)
 {
     int retorno = -1;
     Cliente* aux;
@@ -228,11 +227,11 @@ int info_printClientWithMoreAds(Aviso* list, int len, Cliente* listCliente[], in
 }
 /**
  * \brief Cuenta la cantidad de avisos pausados.
- * \param Aviso* list, Es el puntero al array
+ * \param Aviso* list[], Es el puntero al array
  * \param int len, es el limite de array
  * \return (-1) Error / (0) Ok
  */
-int info_contarAvisosPausados(Aviso* list, int len)
+int info_contarAvisosPausados(Aviso* list[], int len)
 {
     int retorno = -1;
     int contadorPausados = 0;
@@ -241,7 +240,7 @@ int info_contarAvisosPausados(Aviso* list, int len)
     {
         for(int i=0;i<len;i++)
         {
-            if(list[i].estado == 0 && list[i].isEmpty == 0)
+            if(list[i] != NULL && list[i]->estado == 0)
             {
             	contadorPausados++;
             }
@@ -254,12 +253,12 @@ int info_contarAvisosPausados(Aviso* list, int len)
 }
 /**
  * \brief Cuenta la cantidad de avisos por rubro.
- * \param Aviso* list, Es el puntero al array
+ * \param Aviso* list[], Es el puntero al array
  * \param int len, es el limite de array
  * \param int id, recibira el id del cliente.
  * \return (-1) Error / (0) Ok
  */
-int info_contarAvisosPorRubro(Aviso* list, int len, int rubro, int* pContador)
+int info_contarAvisosPorRubro(Aviso* list[], int len, int rubro, int* pContador)
 {
     int retorno = -1;
     int contador = 0;
@@ -268,7 +267,7 @@ int info_contarAvisosPorRubro(Aviso* list, int len, int rubro, int* pContador)
     {
         for(int i=0;i<len;i++)
         {
-            if(list[i].isEmpty == 0 && list[i].rubro == rubro)
+            if(list[i] != NULL && list[i]->rubro == rubro)
             {
             	contador++;
             }
@@ -327,7 +326,7 @@ static int info_estaEnMiListaDeRubro(Rubro* listRubro, int lenRubro, int rubro)
  * \param int rubro, indica el rubro que se va a comparar
  * \return (-1) Error / (0) Ok
  */
-static void info_generarListaDeRubro(Rubro* listRubro, int lenRubro, Aviso* list, int len)
+static void info_generarListaDeRubro(Rubro* listRubro, int lenRubro, Aviso* list[], int len)
 {
 	int i;
 	int indexRubro = 0;
@@ -337,9 +336,9 @@ static void info_generarListaDeRubro(Rubro* listRubro, int lenRubro, Aviso* list
 		info_init(listRubro,lenRubro);
 		for(i=0;i<len; i++)
 		{
-			if(info_estaEnMiListaDeRubro(listRubro, lenRubro, list[i].rubro) == 0 && list[i].isEmpty == 0)
+			if(list[i] != NULL && info_estaEnMiListaDeRubro(listRubro, lenRubro, list[i]->rubro) == 0)
 			{
-				listRubro[indexRubro].tipo = list[i].rubro;
+				listRubro[indexRubro].tipo = list[i]->rubro;
 				listRubro[indexRubro].isEmpty = 0;
 				indexRubro++;
 			}
@@ -348,12 +347,12 @@ static void info_generarListaDeRubro(Rubro* listRubro, int lenRubro, Aviso* list
 }
 /**
  * \brief Imprime el rubro que tenga mas avisos.
- * \param Aviso* list, Es el puntero al array
+ * \param Aviso* list[], Es el puntero al array
  * \param int len, es el limite de array
  * \param int state, indica el estado de los avisos.
  * \return (-1) Error / (0) Ok
  */
-static int info_printRubroConMasAvisos(Aviso* list, int len, Rubro* listRubro, int lenRubro)
+static int info_printRubroConMasAvisos(Aviso* list[], int len, Rubro* listRubro, int lenRubro)
 {
     int retorno = -1;
     Rubro aux;
@@ -383,7 +382,7 @@ static int info_printRubroConMasAvisos(Aviso* list, int len, Rubro* listRubro, i
  * \param int rubro, indica el rubro que se va a comparar
  * \return (-1) Error / (0) Ok
  */
-int info_generarInformeDeRubro(Aviso* list)
+int info_generarInformeDeRubro(Aviso* list[])
 {
 	int retorno = -1;
 	Rubro listRubro[QTY_AVI];
@@ -398,13 +397,13 @@ int info_generarInformeDeRubro(Aviso* list)
 }
 /**
  * \brief Imprime el cliente que tenga mas avisos activos.
- * \param Aviso* list, Es el puntero al array
+ * \param Aviso* list[], Es el puntero al array
  * \param int len, es el limite de array
- * \param Cliente* listCliente, Es el puntero al array.
+ * \param Cliente* listCliente[], Es el puntero al array.
  * \param int lenCliente, es el limite de array.
  * \return (-1) Error / (0) Ok
  */
-int info_printClientWithMoreActivesAds(Aviso* list, int len, Cliente* listCliente[], int lenCliente)
+int info_printClientWithMoreActivesAds(Aviso* list[], int len, Cliente* listCliente[], int lenCliente)
 {
     int retorno = -1;
     Cliente* aux;
@@ -434,13 +433,13 @@ int info_printClientWithMoreActivesAds(Aviso* list, int len, Cliente* listClient
 }
 /**
  * \brief Imprime el cliente que tenga mas avisos pausados.
- * \param Aviso* list, Es el puntero al array
+ * \param Aviso* list[], Es el puntero al array
  * \param int len, es el limite de array
- * \param Cliente* listCliente, Es el puntero al array.
+ * \param Cliente* listCliente[], Es el puntero al array.
  * \param int lenCliente, es el limite de array.
  * \return (-1) Error / (0) Ok
  */
-int info_printClientWithMoreInactivesAds(Aviso* list, int len, Cliente* listCliente[], int lenCliente)
+int info_printClientWithMoreInactivesAds(Aviso* list[], int len, Cliente* listCliente[], int lenCliente)
 {
     int retorno = -1;
     Cliente* aux;

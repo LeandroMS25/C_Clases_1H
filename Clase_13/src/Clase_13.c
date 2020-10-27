@@ -18,14 +18,12 @@ int main(void)
 {
 	setbuf(stdout,NULL);
 	Cliente* listCliente[QTY_CLI];
-	Aviso listAviso[QTY_AVI];
+	Aviso* listAviso[QTY_AVI];
 	int optionMain;
 	int optionReport;
 
-
 	cli_init(listCliente, QTY_CLI);
 	avi_init(listAviso, QTY_AVI);
-
 
 	// CLIENTES
 	cli_altaForzada(listCliente, QTY_CLI,"Leandro","Sobrino","20-15665651-9");
@@ -42,6 +40,14 @@ int main(void)
 	avi_altaForzada(listAviso, QTY_AVI, 4, 1,"Vendo guaymallen de fruta.");
 	avi_altaForzada(listAviso, QTY_AVI, 3, 4,"Vendo guaymallen de fruta.");
 	avi_altaForzada(listAviso, QTY_AVI, 3, 4,"Vendo guaymallen de fruta.");
+
+	for (int i = 0; i < QTY_AVI;  i++)
+	{
+		if(listAviso[i] != NULL && listAviso[i]->estado == ACTIVO)
+		{
+			printf("%d",listAviso[i]->estado);
+		}
+	}
 
 	do
 	{

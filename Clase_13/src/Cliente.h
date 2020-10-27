@@ -19,7 +19,6 @@ typedef struct
 }Cliente;
 
 int cli_init(Cliente* list[], int len);
-int cli_checkFullArray(Cliente* list[], int len);
 int cli_add(Cliente* list[], int len);
 int cli_remove(Cliente* list[], int len, int id);
 int cli_modify(Cliente* list[], int len);
