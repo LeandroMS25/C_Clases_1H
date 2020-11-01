@@ -1,5 +1,8 @@
-07:27:01 **** Incremental Build of configuration Debug for project Clase_13 ****
+14:52:23 **** Rebuild of configuration Debug for project EntityBuilder ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informe.o" "..\\src\\Informe.c" 
-gcc -o Clase_13.exe "src\\Aviso.o" "src\\Clase_13.o" "src\\Cliente.o" "src\\Informe.o" "src\\validaciones.o" 
-Info: Nothing to build for Clase_13
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\menu.o" "..\\src\\menu.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ghost.o" "..\\src\\ghost.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o EntityBuilder.exe "src\\ghost.o" "src\\main.o" "src\\menu.o" "src\\utn.o" 
+Info: Nothing to build for EntityBuilder

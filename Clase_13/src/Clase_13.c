@@ -41,14 +41,6 @@ int main(void)
 	avi_altaForzada(listAviso, QTY_AVI, 3, 4,"Vendo guaymallen de fruta.");
 	avi_altaForzada(listAviso, QTY_AVI, 3, 4,"Vendo guaymallen de fruta.");
 
-	for (int i = 0; i < QTY_AVI;  i++)
-	{
-		if(listAviso[i] != NULL && listAviso[i]->estado == ACTIVO)
-		{
-			printf("%d",listAviso[i]->estado);
-		}
-	}
-
 	do
 	{
 		optionMain = 0;
@@ -142,20 +134,4 @@ int main(void)
 		}
 
 	}while(optionMain != OPTIONS_MAIN);
-
-	/*
-	int *punteroInt;
-	int auxInt;
-
-	auxInt = 10;
-	punteroInt = &auxInt;
-
-	printf("direccion de auxInt = %p \n",&auxInt);
-	printf("direccion de punteroInt = %p \n",&punteroInt);
-
-	printf("auxInt = %d \n",auxInt);
-	printf("punteroInt = %p\n",punteroInt);
-	printf("punteroInt = %d\n",*punteroInt);
-	printf("&punteroInt = %p\n",&punteroInt);
-	*/
 }

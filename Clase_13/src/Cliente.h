@@ -12,7 +12,6 @@
 typedef struct
 {
 	int id;
-	int isEmpty;
 	char name[LONG_NAME];
 	char lastName[LONG_NAME];
 	char cuit[LONG_CUIT];

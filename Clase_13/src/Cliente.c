@@ -13,6 +13,14 @@
 static int generateNewId(void);
 static Cliente* cli_newConParametros(int id, char* name, char* lastName, char* cuit);
 static void cli_delete(Cliente* pCliente);
+static int cli_setID(Cliente* pCliente, int id);
+static int cli_getID(Cliente* pCliente, int* id);
+static int cli_setName(Cliente* pCliente, char* name);
+static int cli_getName(Cliente* pCliente, char* name);
+static int cli_setLastName(Cliente* pCliente, char* lastName);
+static int cli_getLastName(Cliente* pCliente, char* lastName);
+static int cli_setCuit(Cliente* pCliente, char* cuit);
+static int cli_getCuit(Cliente* pCliente, char* cuit);
 /**
  * \brief Crea un nuevo cliente.
  * \param int id, id del cliente.
@@ -29,10 +37,16 @@ static Cliente* cli_newConParametros(int id, char* name, char* lastName, char* c
 		pNewClient = (Cliente*) malloc(sizeof(Cliente));
 		if(pNewClient != NULL)
 		{
+			cli_setID(pNewClient, id);
+			cli_setName(pNewClient, name);
+			cli_setLastName(pNewClient, lastName);
+			cli_setCuit(pNewClient, cuit);
+			/*
 			pNewClient->id = id;
 			strncpy(pNewClient->name,name, sizeof(pNewClient->name));
 			strncpy(pNewClient->lastName,lastName, sizeof(pNewClient->lastName));
 			strncpy(pNewClient->cuit,cuit, sizeof(pNewClient->cuit));
+			*/
 		}
 	}
 	return pNewClient;
@@ -318,7 +332,7 @@ int cli_showClient(Cliente* pCliente)
 }
 /**
  * \brief Realiza un alta forzada de un elemento.
- * \param Cliente* list, Es el puntero al array.
+ * \param Cliente* list[], Es el puntero al array.
  * \param int len, es el limite de array
  * \param char* name, Puntero al espacio de memoria.
  * \param char* lastName, Puntero al espacio de memoria.
@@ -341,6 +355,142 @@ int cli_altaForzada(Cliente* list[], int len, char* name, char* lastName, char* 
 		}
     }
     return retorno;
+}
+/**
+ * \brief Escribe un id.
+ * \param Cliente* pCliente, Es el puntero al array.
+ * \param int id, Puntero al espacio de memoria.
+ * \return (-1) Error / (0) Ok
+ */
+static int cli_setID(Cliente* pCliente, int id)
+{
+	int retorno = -1;
+
+	if(pCliente != NULL && id > 0)
+	{
+		pCliente->id = id;
+		retorno = 0;
+	}
+	return retorno;
+}
+/**
+ * \brief Lee un id.
+ * \param Cliente* pCliente, Es el puntero al array.
+ * \param char* name, Puntero al espacio de memoria.
+ * \return (-1) Error / (0) Ok
+ */
+static int cli_getID(Cliente* pCliente, int* id)
+{
+	int retorno = -1;
+
+	if(pCliente != NULL && id != NULL)
+	{
+		*id = pCliente->id;
+		retorno = 0;
+	}
+	return retorno;
+}
+/**
+ * \brief Escribe un nombre.
+ * \param Cliente* pCliente, Es el puntero al array.
+ * \param char* name, Puntero al espacio de memoria.
+ * \return (-1) Error / (0) Ok
+ */
+static int cli_setName(Cliente* pCliente, char* name)
+{
+	int retorno = -1;
+
+	if(pCliente != NULL && name != NULL)
+	{
+		strncpy(pCliente->name, name, sizeof(pCliente->name));
+		retorno = 0;
+	}
+	return retorno;
+}
+/**
+ * \brief Lee un nombre.
+ * \param Cliente* pCliente, Es el puntero al array.
+ * \param char* name, Puntero al espacio de memoria.
+ * \return (-1) Error / (0) Ok
+ */
+static int cli_getName(Cliente* pCliente, char* name)
+{
+	int retorno = -1;
+
+	if(pCliente != NULL && name != NULL)
+	{
+		strncpy(name, pCliente->name, (int)sizeof(pCliente->name));
+		retorno = 0;
+	}
+	return retorno;
+}
+/**
+ * \brief Escribe un apellido.
+ * \param Cliente* pCliente, Es el puntero al array.
+ * \param char* lastName, Puntero al espacio de memoria.
+ * \return (-1) Error / (0) Ok
+ */
+static int cli_setLastName(Cliente* pCliente, char* lastName)
+{
+	int retorno = -1;
+
+	if(pCliente != NULL && lastName != NULL)
+	{
+		strncpy(pCliente->lastName, lastName, sizeof(pCliente->lastName));
+		retorno = 0;
+	}
+	return retorno;
+}
+/**
+ * \brief Lee un apellido.
+ * \param Cliente* pCliente, Es el puntero al array.
+ * \param char* lastName, Puntero al espacio de memoria.
+ * \return (-1) Error / (0) Ok
+ */
+static int cli_getLastName(Cliente* pCliente, char* lastName)
+{
+	int retorno = -1;
+
+	if(pCliente != NULL && lastName != NULL)
+	{
+		strncpy(lastName, pCliente->lastName, (int)sizeof(lastName));
+		retorno = 0;
+	}
+	return retorno;
+}
+/**
+ * \brief Escribe un cuit.
+ * \param Cliente* pCliente, Es el puntero al array.
+ * \param char* cuit, Puntero al espacio de memoria.
+ * \return (-1) Error / (0) Ok
+ */
+static int cli_setCuit(Cliente* pCliente, char* cuit)
+{
+	int retorno = -1;
+
+	if(pCliente != NULL && cuit != NULL)
+	{
+		strncpy(pCliente->cuit, cuit, sizeof(pCliente->cuit));
+		retorno = 0;
+	}
+	return retorno;
+}
+/**
+ * \brief Lee un cuit.
+ * \param Cliente* pCliente, Es el puntero al array.
+ * \param char* cuit, Puntero al espacio de memoria.
+ * \return (-1) Error / (0) Ok
+ */
+static int cli_getCuit(Cliente* pCliente, char* cuit)
+{
+	int retorno = -1;
+
+	if(pCliente != NULL && cuit != NULL)
+	{
+		strncpy(cuit, pCliente->cuit, (int)sizeof(cuit));
+		retorno = 0;
+	}
+	return retorno;
 }
 /**
  * \brief Incrementa el id y lo retorna.
