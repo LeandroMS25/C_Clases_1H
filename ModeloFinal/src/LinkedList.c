@@ -646,3 +646,5 @@ int ll_reduceInt(LinkedList* this, int (*pFunc)(void*))
 	}
 	return returnAux;
 }
+
+

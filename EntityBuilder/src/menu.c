@@ -13,7 +13,7 @@ int menu_Main(int *pResult)
                 "(1). INGRESE EL NOMBRE DE LA ESTRUCTURA\n"
                 "(2). INGRESE TIPO Y NOMBRE DE CAMPOS DE LA ESTRUCTURA\n"
                 "(3). IMPRIMIR SETTERS Y GETTERS\n"
-                "(4). SALIR -------------> ","EROR, OPCION INVALIDA. REINTENTOS", &option, 3)))
+                "(4). SALIR -------------> ","ERROR, OPCION INVALIDA. REINTENTOS", &option, 3)))
         {
             *pResult = option;
             output = 0;

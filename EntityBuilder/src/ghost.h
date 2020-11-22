@@ -31,6 +31,7 @@ int ghost_generateGetterWithoutChar(char*, char*, char*);
 int ghost_generateIsValid(char*, char*);
 int ghost_generateConstructorNew(char*);
 int ghost_generateConstructorNewParam(Ghost*, int, char*);
+int ghost_generateConstructorDelete(char* varStructureName);
 
 int ghost_generateStructure(Ghost*, int, char*);
 int ghost_generateConstructorsPrototypes(Ghost*, int, char*);
